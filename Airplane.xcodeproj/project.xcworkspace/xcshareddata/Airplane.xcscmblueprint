@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F1346F58074F49B2714FE85F11C01D20BC387995",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EFB08040FD84B7C8E14715958F8863D644C8136C" : 0,
+    "F1346F58074F49B2714FE85F11C01D20BC387995" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0EACF546-C94F-4501-B0DF-45166619A03F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EFB08040FD84B7C8E14715958F8863D644C8136C" : "Drawing\/",
+    "F1346F58074F49B2714FE85F11C01D20BC387995" : "Airplane\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Airplane",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Airplane.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sungjunyoung\/DrawingApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EFB08040FD84B7C8E14715958F8863D644C8136C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sungjunyoung\/Airplane.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F1346F58074F49B2714FE85F11C01D20BC387995"
+    }
+  ]
+}

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2703EFBA1CEDB91100F52C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2703EFB91CEDB91100F52C31 /* Assets.xcassets */; };
+		271525691CEEC6FD00895A5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271525681CEEC6FD00895A5C /* MainViewController.swift */; };
+		2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715256A1CEECEDA00895A5C /* SignupViewController.swift */; };
 		277619521CEDC3B90048D46C /* userdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 277619511CEDC3B90048D46C /* userdata.txt */; };
 		27CF0E521CED9B8300CFF5C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E511CED9B8300CFF5C1 /* AppDelegate.swift */; };
 		27CF0E541CED9B8300CFF5C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E531CED9B8300CFF5C1 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		2703EFB91CEDB91100F52C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Drawing/Drawing/Assets.xcassets; sourceTree = "<group>"; };
+		271525681CEEC6FD00895A5C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2715256A1CEECEDA00895A5C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		277619511CEDC3B90048D46C /* userdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userdata.txt; sourceTree = "<group>"; };
 		27CF0E4E1CED9B8300CFF5C1 /* Airplane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airplane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CF0E511CED9B8300CFF5C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				27CF0E5A1CED9B8300CFF5C1 /* LaunchScreen.storyboard */,
 				27CF0E5D1CED9B8300CFF5C1 /* Info.plist */,
 				277619511CEDC3B90048D46C /* userdata.txt */,
+				271525681CEEC6FD00895A5C /* MainViewController.swift */,
+				2715256A1CEECEDA00895A5C /* SignupViewController.swift */,
 			);
 			path = Airplane;
 			sourceTree = "<group>";
@@ -263,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271525691CEEC6FD00895A5C /* MainViewController.swift in Sources */,
 				27CF0E541CED9B8300CFF5C1 /* ViewController.swift in Sources */,
+				2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */,
 				27CF0E521CED9B8300CFF5C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

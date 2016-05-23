@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -22,7 +24,6 @@ extension UIViewController {
 class ViewController: UIViewController{
     @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var signupBtn: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,19 +41,29 @@ class ViewController: UIViewController{
         } catch _ as NSError {
                 print("error!")
         }
-        //data 는 fileContents에 담겨있습니다.
+        
+    }
+    
+    @IBAction func signin(sender: AnyObject) {
+        self.performSegueWithIdentifier("segMain", sender: self)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //let sendtimer=segue.destinationViewController as! MainView
+        //sendtimer.time=String(time)
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func signup(sender: AnyObject) {
+        self.performSegueWithIdentifier("segSignup", sender: self)
+
     }
-    
-    
+
+    //keyboard Show
     func keyboardWillShow(sender: NSNotification) {
         self.view.frame.origin.y = -150
     }
     
+    //keyboard Hide
     func keyboardWillHide(sender: NSNotification) {
         self.view.frame.origin.y = 0
     }

@@ -17,6 +17,7 @@
 		27CF0E5C1CED9B8300CFF5C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CF0E5A1CED9B8300CFF5C1 /* LaunchScreen.storyboard */; };
 		27CF0E671CED9B8300CFF5C1 /* AirplaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E661CED9B8300CFF5C1 /* AirplaneTests.swift */; };
 		27CF0E721CED9B8400CFF5C1 /* AirplaneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E711CED9B8400CFF5C1 /* AirplaneUITests.swift */; };
+		27D9062A1CF6751800400035 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D906291CF6751800400035 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		27CF0E6D1CED9B8400CFF5C1 /* AirplaneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirplaneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CF0E711CED9B8400CFF5C1 /* AirplaneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplaneUITests.swift; sourceTree = "<group>"; };
 		27CF0E731CED9B8400CFF5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27D906291CF6751800400035 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				277619511CEDC3B90048D46C /* userdata.txt */,
 				271525681CEEC6FD00895A5C /* MainViewController.swift */,
 				2715256A1CEECEDA00895A5C /* SignupViewController.swift */,
+				27D906291CF6751800400035 /* User.swift */,
 			);
 			path = Airplane;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				271525691CEEC6FD00895A5C /* MainViewController.swift in Sources */,
 				27CF0E541CED9B8300CFF5C1 /* ViewController.swift in Sources */,
 				2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */,
+				27D9062A1CF6751800400035 /* User.swift in Sources */,
 				27CF0E521CED9B8300CFF5C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

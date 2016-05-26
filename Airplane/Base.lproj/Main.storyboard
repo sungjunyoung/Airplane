@@ -143,9 +143,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="segTimelineToIntro" id="LE0-aL-bSV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uQ-ab-YXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,7 +267,4 @@
         <image name="logo" width="1024" height="504"/>
         <image name="upperbg" width="2480" height="3507"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="8gy-uH-Rcs"/>
-    </inferredMetricsTieBreakers>
 </document>

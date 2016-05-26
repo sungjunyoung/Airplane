@@ -35,12 +35,47 @@ class ViewController: UIViewController{
         
         let path = NSBundle.mainBundle().pathForResource("userdata", ofType: "txt")
         
-        var fileContents: String? = nil
+        var userdata: String? = nil
         do {
-            fileContents = try String(contentsOfFile: path!, encoding:NSUTF8StringEncoding)
+            userdata = try String(contentsOfFile: path!, encoding:NSUTF8StringEncoding)
         } catch _ as NSError {
                 print("error!")
         }
+        
+        ///////////////////////////////////////유저데이터 어레이, 해시테이블 + 포스트 어레이 만들기//////////////////////////////////////
+        var rawUserList:[NSString] = userdata!.componentsSeparatedByString("\n")
+        var userList = Array<User>()
+        for user in rawUserList {
+            var userSplit:[NSString] = user.componentsSeparatedByString("/")
+            
+            var stringIndex:String = userSplit[0] as String
+            var index = Int(stringIndex)!
+            var email = userSplit[1] as String
+            var password = userSplit[2] as String
+            var name = userSplit[3] as String
+            var group = userSplit[4] as String
+            
+            let rawFriendList:[NSString] = userSplit[5].componentsSeparatedByString(",")
+            let rawRequestList:[NSString] = userSplit[6].componentsSeparatedByString(",")
+            
+            var friendList = Array<Int>()
+            var requestList = Array<Int>()
+            
+            for friend in rawFriendList{
+                let stringFriend = friend as String
+                friendList.append(Int(stringFriend)!)
+            }
+            for request in rawRequestList{
+                let stringRequest = request as String
+                requestList.append(Int(stringRequest)!)
+            }
+            
+            var user = User(index: index,email: email,password: password,name: name,group: group,friendList: friendList,requestList: requestList)
+            userList.append(user)
+        } // 유저데이터 어레이 완성
+        
+        
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
     }
     

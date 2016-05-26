@@ -151,6 +151,7 @@ class ViewController: UIViewController{
         else{
             if tempUser.password == self.passwordTextBox!.text!{
                 //이메일과 패스워드가 모두 일치 할 때 로그인 가능
+                UserManager.nowUser = tempUser // 현재 유저 설정
                 self.performSegueWithIdentifier("segMain", sender: self)
             }
             else {

@@ -25,6 +25,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var emailTextBox: UITextField!
+    @IBOutlet weak var passwordTextBox: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -142,11 +143,19 @@ class ViewController: UIViewController{
     
     @IBAction func signin(sender: AnyObject) {
         let tempUser:User = UserManager.findByEmail(self.emailTextBox!.text!)
-        if tempUser.index == -1{
+        // 해시테이블에서 유저를 찾아 로그인 하게한다.
+        
+        if tempUser.index == -1{ // 유저를 찾지 못햇다면
             print("incorrect email")
         }
         else{
-            self.performSegueWithIdentifier("segMain", sender: self)
+            if tempUser.password == self.passwordTextBox!.text!{
+                //이메일과 패스워드가 모두 일치 할 때 로그인 가능
+                self.performSegueWithIdentifier("segMain", sender: self)
+            }
+            else {
+                print("incorrect password")
+            }
         }
     }
     

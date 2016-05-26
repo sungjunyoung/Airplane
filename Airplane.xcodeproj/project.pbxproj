@@ -18,6 +18,7 @@
 		27CF0E671CED9B8300CFF5C1 /* AirplaneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E661CED9B8300CFF5C1 /* AirplaneTests.swift */; };
 		27CF0E721CED9B8400CFF5C1 /* AirplaneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E711CED9B8400CFF5C1 /* AirplaneUITests.swift */; };
 		27D9062A1CF6751800400035 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D906291CF6751800400035 /* User.swift */; };
+		27D9062C1CF6B98E00400035 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9062B1CF6B98E00400035 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		27CF0E711CED9B8400CFF5C1 /* AirplaneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirplaneUITests.swift; sourceTree = "<group>"; };
 		27CF0E731CED9B8400CFF5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27D906291CF6751800400035 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		27D9062B1CF6B98E00400035 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				271525681CEEC6FD00895A5C /* MainViewController.swift */,
 				2715256A1CEECEDA00895A5C /* SignupViewController.swift */,
 				27D906291CF6751800400035 /* User.swift */,
+				27D9062B1CF6B98E00400035 /* UserManager.swift */,
 			);
 			path = Airplane;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D9062C1CF6B98E00400035 /* UserManager.swift in Sources */,
 				271525691CEEC6FD00895A5C /* MainViewController.swift in Sources */,
 				27CF0E541CED9B8300CFF5C1 /* ViewController.swift in Sources */,
 				2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */,

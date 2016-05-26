@@ -73,6 +73,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="emailTextBox" destination="acc-wm-p40" id="0Pf-pG-Bln"/>
                         <outlet property="signinBtn" destination="ivK-D5-qve" id="acJ-MA-D1Y"/>
                         <outlet property="signupBtn" destination="vuG-WF-ebq" id="MAi-qu-q3o"/>
                         <segue destination="shS-cU-rRA" kind="show" identifier="segMain" id="SHA-VE-EHd"/>

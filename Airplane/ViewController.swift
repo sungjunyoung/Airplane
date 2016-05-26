@@ -24,6 +24,7 @@ extension UIViewController {
 class ViewController: UIViewController{
     @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var signupBtn: UIButton!
+    @IBOutlet weak var emailTextBox: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,17 +44,17 @@ class ViewController: UIViewController{
         }
         
         ///////////////////////////////////////유저데이터 어레이, 해시테이블 + 포스트 어레이 만들기//////////////////////////////////////
-        var rawUserList:[NSString] = userdata!.componentsSeparatedByString("\n")
+        let rawUserList:[NSString] = userdata!.componentsSeparatedByString("\n")
         var userList = Array<User>()
         for user in rawUserList {
             var userSplit:[NSString] = user.componentsSeparatedByString("/")
             
-            var stringIndex:String = userSplit[0] as String
-            var index = Int(stringIndex)!
-            var email = userSplit[1] as String
-            var password = userSplit[2] as String
-            var name = userSplit[3] as String
-            var group = userSplit[4] as String
+            let stringIndex:String = userSplit[0] as String
+            let index = Int(stringIndex)!
+            let email = userSplit[1] as String
+            let password = userSplit[2] as String
+            let name = userSplit[3] as String
+            let group = userSplit[4] as String
             
             let rawFriendList:[NSString] = userSplit[5].componentsSeparatedByString(",")
             let rawRequestList:[NSString] = userSplit[6].componentsSeparatedByString(",")
@@ -70,18 +71,85 @@ class ViewController: UIViewController{
                 requestList.append(Int(stringRequest)!)
             }
             
-            var user = User(index: index,email: email,password: password,name: name,group: group,friendList: friendList,requestList: requestList)
+            let user = User(index: index,email: email,password: password,name: name,group: group,friendList: friendList,requestList: requestList)
             userList.append(user)
-        } // 유저데이터 어레이 완성
+        } // 유저데이터 어레이
+        
+        //이메일 해시테이블 생성
+        var emailHashTable = Array<Array<User>>()
+        var tempList1 = Array<User>()
+        for (var i=0; i<1000 ; i++){
+            emailHashTable.append(tempList1)
+        }
+        
+        for user in userList{
+            var sum = 0
+            for character in user.email.utf8{
+                let stringSegment:String = "\(character)"
+                sum += Int(stringSegment)!
+            }
+            sum = sum % 1000
+            emailHashTable[sum].append(user)
+        }
+        
+        //이름 해시테이블 생성
+        var nameHashTable = Array<Array<User>>()
+        var tempList2 = Array<User>()
+        for i in 0..<1000 {
+            nameHashTable.append(tempList2)
+        }
+        
+        for user in userList{
+            var sum = 0
+            for character in user.name.utf8{
+                let stringSegment:String = "\(character)"
+                sum += Int(stringSegment)!
+            }
+            sum = sum % 1000
+            nameHashTable[sum].append(user)
+        }
         
         
+      
+        //해시테이블에 잘 들어갓나 확인
+        print("이메일")
+        var i = 0 , j = 0
+        for userLi in emailHashTable{
+            j=0
+            for user in userLi{
+                print(i," ",j," ",user.email)
+                j+=1
+            }
+            i+=1
+        }
+        print("이름")
+        i = 0
+        for userLi in nameHashTable{
+            j = 0
+            for user in userLi{
+                print(i," ",j," ",user.name)
+                j+=1
+            }
+            i+=1
+        }
+        
+        UserManager.userList = userList
+        UserManager.emailHashTable = emailHashTable
+        UserManager.nameHashTable = nameHashTable
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
     }
     
     @IBAction func signin(sender: AnyObject) {
-        self.performSegueWithIdentifier("segMain", sender: self)
+        let tempUser:User = UserManager.findByEmail(self.emailTextBox!.text!)
+        if tempUser.index == -1{
+            print("incorrect email")
+        }
+        else{
+            self.performSegueWithIdentifier("segMain", sender: self)
+        }
     }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //let sendtimer=segue.destinationViewController as! MainView
         //sendtimer.time=String(time)
@@ -90,7 +158,7 @@ class ViewController: UIViewController{
 
     @IBAction func signup(sender: AnyObject) {
         self.performSegueWithIdentifier("segSignup", sender: self)
-
+        
     }
 
     //keyboard Show

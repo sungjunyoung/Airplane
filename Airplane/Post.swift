@@ -15,6 +15,12 @@ class Post{
     var date = ""
     var content = ""
     
+    init(){
+        self.index = -1
+        self.userIndex = -1
+        self.date = ""
+        self.content = ""
+    }
     
     init(index:Int, userIndex:Int, date:String, content:String){
         self.index = index

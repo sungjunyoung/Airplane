@@ -13,7 +13,7 @@ class UserManager{
     static var userList = Array<User>()
     static var emailHashTable = Array<Array<User>>()
     static var nameHashTable = Array<Array<User>>()
-    static var nowUser = User(index: -1, email: "", password: "", name: "", group: "", friendList: Array<Int>(), requestList: Array<Int>())
+    static var nowUser = User()
     
     //이메일 해시 인덱스를 리턴하는 해싱 함수
     static func emailHashingFunc(email:String) -> Int{
@@ -29,7 +29,7 @@ class UserManager{
     
     //이메일 해시테이블을 검색하여 해당 유저를 리턴해주는 함수
     static func findByEmail(email:String) -> User{
-        var index:Int = emailHashingFunc(email)
+        let index:Int = emailHashingFunc(email)
         
         ///////////////////////////////// => 이분검색으로 바꿔야함
         for user in emailHashTable[index]{
@@ -40,14 +40,8 @@ class UserManager{
         ////////////////////////////////
         
         
-        let incorrectfriendList = Array<Int>()
-        let incorrectrequestList = Array<Int>()
-        let incorrectUser = User(index: -1, email: "", password: "", name: "", group: "", friendList: incorrectfriendList, requestList: incorrectrequestList)
+        let incorrectUser = User()
         
         return incorrectUser
     }
-    
-    
-    
-
 }

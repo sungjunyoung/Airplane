@@ -35,17 +35,43 @@ class ViewController: UIViewController{
         //키보드 뜨는지
         self.hideKeyboardWhenTappedAround()
         
-        let path = NSBundle.mainBundle().pathForResource("userdata", ofType: "txt")
+        let userpath = NSBundle.mainBundle().pathForResource("userdata", ofType: "txt")
+        let postpath = NSBundle.mainBundle().pathForResource("postdata", ofType: "txt")
+
         
         var userdata: String? = nil
         do {
-            userdata = try String(contentsOfFile: path!, encoding:NSUTF8StringEncoding)
+            userdata = try String(contentsOfFile: userpath!, encoding:NSUTF8StringEncoding)
         } catch _ as NSError {
                 print("error!")
         }
+        var postdata: String? = nil
+        do {
+            postdata = try String(contentsOfFile: postpath!, encoding:NSUTF8StringEncoding)
+        } catch _ as NSError {
+            print("error!")
+        }
         
         ///////////////////////////////////////유저데이터 어레이, 해시테이블 + 포스트 어레이 만들기//////////////////////////////////////
+        let rawPostList:[NSString] = postdata!.componentsSeparatedByString("\n")
         let rawUserList:[NSString] = userdata!.componentsSeparatedByString("\n")
+        var userPostList = Array<Array<Post>>()
+        for _ in rawUserList{
+            userPostList.append(Array<Post>())
+        }
+        
+        for post in rawPostList{
+            var postSplit:[NSString] = post.componentsSeparatedByString("/")
+            let post = Post()
+            post.index = Int(postSplit[0] as String)!
+            post.userIndex = Int(postSplit[1] as String)!
+            post.date = postSplit[2] as String!
+            post.content = postSplit[3] as String!
+            
+            userPostList[post.userIndex].append(post)
+        }
+        
+        
         var userList = Array<User>()
         for user in rawUserList {
             var userSplit:[NSString] = user.componentsSeparatedByString("/")
@@ -72,7 +98,7 @@ class ViewController: UIViewController{
                 requestList.append(Int(stringRequest)!)
             }
             
-            let user = User(index: index,email: email,password: password,name: name,group: group,friendList: friendList,requestList: requestList)
+            let user = User(index: index,email: email,password: password,name: name,group: group,friendList: friendList,requestList: requestList, postList: userPostList[index])
             userList.append(user)
         } // 유저데이터 어레이
         
@@ -90,13 +116,14 @@ class ViewController: UIViewController{
                 sum += Int(stringSegment)!
             }
             sum = sum % 1000
+            
             emailHashTable[sum].append(user)
         }
         
         //이름 해시테이블 생성
         var nameHashTable = Array<Array<User>>()
         var tempList2 = Array<User>()
-        for i in 0..<1000 {
+        for _ in 0..<1000 {
             nameHashTable.append(tempList2)
         }
         
@@ -108,9 +135,10 @@ class ViewController: UIViewController{
             }
             sum = sum % 1000
             nameHashTable[sum].append(user)
+            //nameHashTable[sum].sortInPlace{(user1:User, user2:User)->Bool in user1.email < user2.email
         }
-        
-        
+
+    
       
         //해시테이블에 잘 들어갓나 확인
         print("이메일")

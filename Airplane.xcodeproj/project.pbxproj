@@ -11,6 +11,8 @@
 		271525691CEEC6FD00895A5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271525681CEEC6FD00895A5C /* MainViewController.swift */; };
 		2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715256A1CEECEDA00895A5C /* SignupViewController.swift */; };
 		277619521CEDC3B90048D46C /* userdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 277619511CEDC3B90048D46C /* userdata.txt */; };
+		2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF401CF6E49F003B1289 /* FileManager.swift */; };
+		2782EF451CF6F608003B1289 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF441CF6F608003B1289 /* PostCell.swift */; };
 		27CF0E521CED9B8300CFF5C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E511CED9B8300CFF5C1 /* AppDelegate.swift */; };
 		27CF0E541CED9B8300CFF5C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E531CED9B8300CFF5C1 /* ViewController.swift */; };
 		27CF0E571CED9B8300CFF5C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CF0E551CED9B8300CFF5C1 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		271525681CEEC6FD00895A5C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2715256A1CEECEDA00895A5C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		277619511CEDC3B90048D46C /* userdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userdata.txt; sourceTree = "<group>"; };
+		2782EF401CF6E49F003B1289 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		2782EF441CF6F608003B1289 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		27CF0E4E1CED9B8300CFF5C1 /* Airplane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airplane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CF0E511CED9B8300CFF5C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27CF0E531CED9B8300CFF5C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				27D9062B1CF6B98E00400035 /* UserManager.swift */,
 				27D9062D1CF6C53400400035 /* postdata.txt */,
 				27D9062F1CF6C55800400035 /* Post.swift */,
+				2782EF401CF6E49F003B1289 /* FileManager.swift */,
+				2782EF441CF6F608003B1289 /* PostCell.swift */,
 			);
 			path = Airplane;
 			sourceTree = "<group>";
@@ -287,8 +293,10 @@
 				27CF0E541CED9B8300CFF5C1 /* ViewController.swift in Sources */,
 				2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */,
 				27D9062A1CF6751800400035 /* User.swift in Sources */,
+				2782EF451CF6F608003B1289 /* PostCell.swift in Sources */,
 				27D906301CF6C55800400035 /* Post.swift in Sources */,
 				27CF0E521CED9B8300CFF5C1 /* AppDelegate.swift in Sources */,
+				2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

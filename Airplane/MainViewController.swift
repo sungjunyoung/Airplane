@@ -24,7 +24,9 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
         
         for friendIndex in UserManager.nowUser.friendList{
             postList.appendContentsOf(UserManager.userList[friendIndex].postList)
-        }//아직 정렬하지 않음
+        }
+        postList.sortInPlace{(post1:Post, post2:Post)->Bool in post1.date > post2.date}
+
     }
     
     //keyboard Show

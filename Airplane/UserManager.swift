@@ -26,6 +26,16 @@ class UserManager{
 
         return sum
     }
+    static func nameHashingFunc(name:String) -> Int{
+        var sum = 0
+        for character in name.utf8{
+            let stringSegment:String = "\(character)"
+            sum += Int(stringSegment)!
+        }
+        sum = sum % 1000
+        
+        return sum
+    }
     
     //이메일 해시테이블을 검색하여 해당 유저를 리턴해주는 함수
     static func findByEmail(email:String) -> User{
@@ -35,6 +45,16 @@ class UserManager{
             return noUser
         } else{
             return emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)]
+        }
+    }
+    
+    static func findByName(name:String) -> User{
+        let index:Int = emailHashingFunc(name)
+        let noUser = User()
+        if( emailBinarySearch(nameHashTable[index], key: name) == -1 ){
+            return noUser
+        } else{
+            return nameHashTable[index][nameBinarySearch(emailHashTable[index], key: name)]
         }
     }
     

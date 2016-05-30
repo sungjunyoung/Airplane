@@ -118,6 +118,7 @@ class ViewController: UIViewController{
             sum = sum % 1000
             
             emailHashTable[sum].append(user)
+            emailHashTable[sum].sortInPlace{(user1:User, user2:User)->Bool in user1.email < user2.email}
         }
         
         //이름 해시테이블 생성
@@ -135,7 +136,7 @@ class ViewController: UIViewController{
             }
             sum = sum % 1000
             nameHashTable[sum].append(user)
-            //nameHashTable[sum].sortInPlace{(user1:User, user2:User)->Bool in user1.email < user2.email
+            nameHashTable[sum].sortInPlace{(user1:User, user2:User)->Bool in user1.name < user2.name}
         }
 
     
@@ -188,11 +189,6 @@ class ViewController: UIViewController{
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //let sendtimer=segue.destinationViewController as! MainView
-        //sendtimer.time=String(time)
-        
-    }
 
     @IBAction func signup(sender: AnyObject) {
         self.performSegueWithIdentifier("segSignup", sender: self)
@@ -208,8 +204,5 @@ class ViewController: UIViewController{
     func keyboardWillHide(sender: NSNotification) {
         self.view.frame.origin.y = 0
     }
-    
-  
-
 }
 

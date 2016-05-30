@@ -30,18 +30,48 @@ class UserManager{
     //이메일 해시테이블을 검색하여 해당 유저를 리턴해주는 함수
     static func findByEmail(email:String) -> User{
         let index:Int = emailHashingFunc(email)
+        let noUser = User()
+        if( emailBinarySearch(emailHashTable[index], key: email) == -1 ){
+            return noUser
+        } else{
+            return emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)]
+        }
+    }
+    
+    static func emailBinarySearch(list:Array<User>, key:String)->Int{
+        var first = 0
+        var last = list.count
         
-        ///////////////////////////////// => 이분검색으로 바꿔야함
-        for user in emailHashTable[index]{
-            if user.email == email {
-                return user
+        while(first < last){
+            var mid = Int((first+last)/2)
+            if (key < list[mid].email){
+                last = mid;
+            } else if (key > list[mid].email){
+                first = mid + 1
+            } else{
+                return mid
             }
         }
-        ////////////////////////////////
-        
-        
-        let incorrectUser = User()
-        
-        return incorrectUser
+        return -(first+1)
     }
+    
+    static func nameBinarySearch(list:Array<User>, key:String)->Int{
+        var first = 0
+        var last = list.count
+        
+        while(first < last){
+            var mid = Int((first+last)/2)
+            if (key < list[mid].name){
+                last = mid;
+            } else if (key > list[mid].name){
+                first = mid + 1
+            } else{
+                return mid
+            }
+        }
+        return -(first+1)
+    }
+    
+    
+
 }

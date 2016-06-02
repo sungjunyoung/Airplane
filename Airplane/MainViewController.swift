@@ -21,9 +21,10 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         self.hideKeyboardWhenTappedAround()
         
-        
-        for friendIndex in UserManager.nowUser.friendList{
-            postList.appendContentsOf(UserManager.userList[friendIndex].postList)
+        if UserManager.nowUser.friendList.count != 0{
+            for friendIndex in UserManager.nowUser.friendList{
+                postList.appendContentsOf(UserManager.userList[friendIndex].postList)
+            }
         }
         postList.sortInPlace{(post1:Post, post2:Post)->Bool in post1.date > post2.date}
         print("mainview is loaded")

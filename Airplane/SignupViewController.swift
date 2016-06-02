@@ -52,14 +52,17 @@ class SignupViewController : UIViewController{
                 return
             } else{
                 var user = User()
-                user.index = UserManager.userList.count-1
+                user.index = UserManager.userList.count
                 user.email = emailTextField.text!
                 user.password = passwordTextField.text!
                 user.name = nameTextField.text!
                 user.group = groupTextField.text!
                 
+                
                 UserManager.userList.append(user)
-                FileManager.updateUserFile(UserManager.userList)
+                UserManager.emailHashTable[UserManager.emailHashingFunc(user.email)].append(user)
+                UserManager.nameHashTable[UserManager.nameHashingFunc(user.name)].append(user)
+                FileManager.updateUserFile(UserManager.userList,postList:UserManager.postList)
             }
         }
         //회원가입을 누르면 파일에 출력

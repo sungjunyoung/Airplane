@@ -9,11 +9,19 @@
 import Foundation
 
 class UserManager{
-    
     static var userList = Array<User>()
+    static var postList = Array<Post>()
     static var emailHashTable = Array<Array<User>>()
     static var nameHashTable = Array<Array<User>>()
     static var nowUser = User()
+    
+    static func initUserManager(){
+        userList = Array<User>()
+        postList = Array<Post>()
+        emailHashTable = Array<Array<User>>()
+        nameHashTable = Array<Array<User>>()
+        nowUser = User()
+    }
     
     //이메일 해시 인덱스를 리턴하는 해싱 함수
     static func emailHashingFunc(email:String) -> Int{

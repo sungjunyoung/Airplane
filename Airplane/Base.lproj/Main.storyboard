@@ -140,16 +140,6 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nE-J7-Jwx">
-                                <rect key="frame" x="251" y="571" width="124" height="42"/>
-                                <color key="backgroundColor" red="0.99592904415567229" green="1" blue="0.97671965484268319" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="SETTINGS">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="chP-ME-3hF" kind="presentation" id="ZLh-Aw-Af2"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SOCIAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGy-bk-POp">
                                 <rect key="frame" x="118" y="52" width="139" height="26"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
@@ -164,7 +154,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvV-on-yTv" id="vCq-uG-Cux">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItH-bM-aIf">
@@ -209,6 +199,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Fhx-pX-U1K">
                                 <rect key="frame" x="293" y="52" width="77" height="40"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nE-J7-Jwx">
+                                <rect key="frame" x="251" y="571" width="124" height="42"/>
+                                <color key="backgroundColor" red="0.99038461538461542" green="1" blue="0.98076923076923073" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="SETTINGS">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="chP-ME-3hF" kind="presentation" id="ZLh-Aw-Af2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

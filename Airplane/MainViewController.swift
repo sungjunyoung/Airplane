@@ -26,7 +26,7 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
             postList.appendContentsOf(UserManager.userList[friendIndex].postList)
         }
         postList.sortInPlace{(post1:Post, post2:Post)->Bool in post1.date > post2.date}
-
+        print("mainview is loaded")
     }
     
     //keyboard Show

@@ -20,6 +20,7 @@ class SettingViewController : UIViewController{
         newPasswordTextfield.text = UserManager.nowUser.password
         newVerifyPasswordTextfield.text = UserManager.nowUser.password
     }
+    
     @IBAction func updateInfo(sender: AnyObject) {
         
     }

@@ -176,6 +176,7 @@ class ViewController: UIViewController{
         
         if tempUser.index == -1{ // 유저를 찾지 못햇다면
             print("incorrect email")
+            userIncorrectAlert()
         }
         else{
             if tempUser.password == self.passwordTextBox!.text!{
@@ -185,8 +186,19 @@ class ViewController: UIViewController{
             }
             else {
                 print("incorrect password")
+                userIncorrectAlert()
             }
         }
+    }
+    
+    func userIncorrectAlert(){
+        let alert = UIAlertController(title: "회원정보 불일치", message: "회원 정보를 확인해 주세요", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let cancel = UIAlertAction(title: "확인", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        alert.addAction(cancel)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
 

@@ -328,6 +328,9 @@
                                 <state key="normal" title="회 원 탈 퇴">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signOut:" destination="chP-ME-3hF" eventType="touchUpInside" id="w58-Je-Qdg"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JcK-ZV-alW">
                                 <rect key="frame" x="0.0" y="134" width="375" height="334"/>
@@ -381,7 +384,7 @@
                                     <color key="titleColor" red="0.1215686275" green="0.5450980392" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="6yf-K1-5j3"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="segSignOut" id="6yf-K1-5j3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -527,6 +530,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dr4-DN-X4G"/>
-        <segue reference="8gy-uH-Rcs"/>
+        <segue reference="6yf-K1-5j3"/>
     </inferredMetricsTieBreakers>
 </document>

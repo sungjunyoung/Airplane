@@ -34,6 +34,8 @@ class UserManager{
 
         return sum
     }
+    
+    //이름 해시 인덱스를 리턴하는 해싱 함수
     static func nameHashingFunc(name:String) -> Int{
         var sum = 0
         for character in name.utf8{
@@ -43,6 +45,17 @@ class UserManager{
         sum = sum % 1000
         
         return sum
+    }
+    
+    
+    static func deleteUserInHashTable(user:User){
+        let emailindex:Int = emailHashingFunc(user.email)
+        let email = user.email
+        emailHashTable[emailindex].removeAtIndex(emailBinarySearch(emailHashTable[emailindex], key:email))
+        
+        let nameIndex:Int = nameHashingFunc(user.name)
+        let name = user.name
+        nameHashTable[nameIndex].removeAtIndex(nameBinarySearch(nameHashTable[nameIndex], key:name))
     }
     
     //이메일 해시테이블을 검색하여 해당 유저를 리턴해주는 함수
@@ -55,6 +68,8 @@ class UserManager{
             return emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)]
         }
     }
+    
+    //유저의 정보를 해시테이블에 업데이트 해주는 함수
     static func updateUserInfo(user:User){
         let index:Int = emailHashingFunc(user.email)
         let email = user.email
@@ -63,6 +78,7 @@ class UserManager{
         FileManager.updateUserFile(userList, postList: postList)
     }
     
+    //해시테이블에서 이름으로 검색하여 유저를 리턴해주는 ㅎ마수
     static func findByName(name:String) -> User{
         let index:Int = emailHashingFunc(name)
         let noUser = User()
@@ -73,6 +89,7 @@ class UserManager{
         }
     }
     
+    //해시테이블 내에서 바이너리 서치 (이메일)
     static func emailBinarySearch(list:Array<User>, key:String)->Int{
         var first = 0
         var last = list.count
@@ -107,6 +124,7 @@ class UserManager{
         }
         return -(first+1)
     }
+    
     
     
 

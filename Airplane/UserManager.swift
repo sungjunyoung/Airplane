@@ -55,6 +55,13 @@ class UserManager{
             return emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)]
         }
     }
+    static func updateUserInfo(user:User){
+        let index:Int = emailHashingFunc(user.email)
+        let email = user.email
+        emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)].group = user.group
+        emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)].password = user.password
+        FileManager.updateUserFile(userList, postList: postList)
+    }
     
     static func findByName(name:String) -> User{
         let index:Int = emailHashingFunc(name)
@@ -82,6 +89,7 @@ class UserManager{
         }
         return -(first+1)
     }
+    
     
     static func nameBinarySearch(list:Array<User>, key:String)->Int{
         var first = 0

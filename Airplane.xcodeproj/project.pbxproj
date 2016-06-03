@@ -10,9 +10,11 @@
 		2703EFBA1CEDB91100F52C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2703EFB91CEDB91100F52C31 /* Assets.xcassets */; };
 		271525691CEEC6FD00895A5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271525681CEEC6FD00895A5C /* MainViewController.swift */; };
 		2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715256A1CEECEDA00895A5C /* SignupViewController.swift */; };
+		276EF2E61D0120FE007FAC13 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EF2E51D0120FE007FAC13 /* FriendCell.swift */; };
 		277619521CEDC3B90048D46C /* userdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 277619511CEDC3B90048D46C /* userdata.txt */; };
 		2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF401CF6E49F003B1289 /* FileManager.swift */; };
 		2782EF451CF6F608003B1289 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF441CF6F608003B1289 /* PostCell.swift */; };
+		27BE153A1D013ACF00B70D94 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BE15391D013ACF00B70D94 /* FriendListViewController.swift */; };
 		27CF0E521CED9B8300CFF5C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E511CED9B8300CFF5C1 /* AppDelegate.swift */; };
 		27CF0E541CED9B8300CFF5C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E531CED9B8300CFF5C1 /* ViewController.swift */; };
 		27CF0E571CED9B8300CFF5C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CF0E551CED9B8300CFF5C1 /* Main.storyboard */; };
@@ -47,9 +49,11 @@
 		2703EFB91CEDB91100F52C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Drawing/Drawing/Assets.xcassets; sourceTree = "<group>"; };
 		271525681CEEC6FD00895A5C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2715256A1CEECEDA00895A5C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		276EF2E51D0120FE007FAC13 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		277619511CEDC3B90048D46C /* userdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userdata.txt; sourceTree = "<group>"; };
 		2782EF401CF6E49F003B1289 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		2782EF441CF6F608003B1289 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		27BE15391D013ACF00B70D94 /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		27CF0E4E1CED9B8300CFF5C1 /* Airplane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airplane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CF0E511CED9B8300CFF5C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27CF0E531CED9B8300CFF5C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				2782EF401CF6E49F003B1289 /* FileManager.swift */,
 				2782EF441CF6F608003B1289 /* PostCell.swift */,
 				27E0D1401CFC3AFF00F82A5E /* SettingViewController.swift */,
+				276EF2E51D0120FE007FAC13 /* FriendCell.swift */,
+				27BE15391D013ACF00B70D94 /* FriendListViewController.swift */,
 			);
 			path = Airplane;
 			sourceTree = "<group>";
@@ -297,7 +303,9 @@
 				2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */,
 				27D9062A1CF6751800400035 /* User.swift in Sources */,
 				27E0D1411CFC3AFF00F82A5E /* SettingViewController.swift in Sources */,
+				276EF2E61D0120FE007FAC13 /* FriendCell.swift in Sources */,
 				2782EF451CF6F608003B1289 /* PostCell.swift in Sources */,
+				27BE153A1D013ACF00B70D94 /* FriendListViewController.swift in Sources */,
 				27D906301CF6C55800400035 /* Post.swift in Sources */,
 				27CF0E521CED9B8300CFF5C1 /* AppDelegate.swift in Sources */,
 				2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */,

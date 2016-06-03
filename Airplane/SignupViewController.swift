@@ -63,9 +63,23 @@ class SignupViewController : UIViewController{
                 UserManager.emailHashTable[UserManager.emailHashingFunc(user.email)].append(user)
                 UserManager.nameHashTable[UserManager.nameHashingFunc(user.name)].append(user)
                 FileManager.updateUserFile(UserManager.userList,postList:UserManager.postList)
+                completeAlert()
             }
         }
         //회원가입을 누르면 파일에 출력
+    }
+    
+    func completeAlert(){
+        let alert = UIAlertController(title: "완료", message: "회원가입 완료", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let cancel = UIAlertAction(title: "확인", style: UIAlertActionStyle.Default){
+            (action:UIAlertAction)->Void in print("OK")
+            self.performSegueWithIdentifier("segSignupToIntro", sender: self)
+        }
+        
+        alert.addAction(cancel)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func comfirmAlert(){

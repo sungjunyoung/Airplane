@@ -16,6 +16,11 @@ class SettingViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        //키보드 뜨는지
+        self.hideKeyboardWhenTappedAround()
+        
         newGroupTextfield.text = UserManager.nowUser.group
         newPasswordTextfield.text = UserManager.nowUser.password
         newVerifyPasswordTextfield.text = UserManager.nowUser.password
@@ -91,5 +96,15 @@ class SettingViewController : UIViewController{
         alert.addAction(no)
         
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    //keyboard Show
+    func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y = -150
+    }
+    
+    //keyboard Hide
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y = 0
     }
 }

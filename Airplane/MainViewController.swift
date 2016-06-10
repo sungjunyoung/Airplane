@@ -21,8 +21,9 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         self.hideKeyboardWhenTappedAround()
         
+        postList.appendContentsOf(UserManager.nowUser.postList)
+        
         if UserManager.nowUser.friendList.count != 0{
-            postList.appendContentsOf(UserManager.nowUser.postList)
             for friendIndex in UserManager.nowUser.friendList{
                 postList.appendContentsOf(UserManager.userList[friendIndex].postList)
             }
@@ -89,7 +90,15 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
             dateFormatter.dateFormat = "yyyy.MM.dd.hh.mm"
             let date = dateFormatter.stringFromDate(rawDate)
             
-            let post = Post(index: UserManager.nowUser.postList[UserManager.nowUser.postList.count-1].index+1, userIndex: UserManager.nowUser.index, date: date, content: postContent!)
+            var postIndex = -1
+            if ( UserManager.nowUser.postList.count == 0 ){
+                postIndex = 0
+            } else{
+                postIndex = UserManager.nowUser.postList[UserManager.nowUser.postList.count-1].index+1
+            }
+            
+            
+            let post = Post(index: postIndex, userIndex: UserManager.nowUser.index, date: date, content: postContent!)
             
             UserManager.nowUser.postList.append(post)
             UserManager.updateUserInfo(UserManager.nowUser)

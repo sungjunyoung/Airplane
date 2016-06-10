@@ -106,6 +106,10 @@ class UserManager{
         var resultArray = Array<User>()
         
         for i in nameBinarySearch(nameHashTable[index], key:name){
+            print(i)
+        }
+        
+        for i in nameBinarySearch(nameHashTable[index], key:name){
             resultArray.append(nameHashTable[index][i])
         }
 
@@ -144,10 +148,12 @@ class UserManager{
             } else if (key > list[mid].name){
                 first = mid + 1
             } else{
-                while (first > 0 && list[first-1].email == key){
+                last = mid;
+                first = mid;
+                while (first > 0 && list[first-1].name == key){
                     first-=1;
                 }
-                while (last < list.count - 1 && list[last+1].email == key){
+                while (last < list.count-1 && list[last+1].name == key){
                     last+=1;
                 }
                 for(var i = first ; i<=last ; i+=1){

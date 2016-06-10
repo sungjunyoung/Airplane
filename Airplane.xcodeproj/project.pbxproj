@@ -14,6 +14,8 @@
 		274191EE1D0A70AB0026AAE0 /* SaveClickInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */; };
 		274191F41D0A8C200026AAE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274191F31D0A8C200026AAE0 /* Assets.xcassets */; };
 		276B66011D0AAB3F003C5216 /* SearchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B66001D0AAB3F003C5216 /* SearchText.swift */; };
+		276B66031D0AAC6B003C5216 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B66021D0AAC6B003C5216 /* SearchResultViewController.swift */; };
+		276B66051D0AAE59003C5216 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B66041D0AAE59003C5216 /* SearchCell.swift */; };
 		276EF2E61D0120FE007FAC13 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EF2E51D0120FE007FAC13 /* FriendCell.swift */; };
 		2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF401CF6E49F003B1289 /* FileManager.swift */; };
 		2782EF451CF6F608003B1289 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF441CF6F608003B1289 /* PostCell.swift */; };
@@ -55,6 +57,8 @@
 		274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveClickInfo.swift; sourceTree = "<group>"; };
 		274191F31D0A8C200026AAE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276B66001D0AAB3F003C5216 /* SearchText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchText.swift; sourceTree = "<group>"; };
+		276B66021D0AAC6B003C5216 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		276B66041D0AAE59003C5216 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		276EF2E51D0120FE007FAC13 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		2782EF401CF6E49F003B1289 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		2782EF441CF6F608003B1289 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */,
 				274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */,
 				276B66001D0AAB3F003C5216 /* SearchText.swift */,
+				276B66021D0AAC6B003C5216 /* SearchResultViewController.swift */,
+				276B66041D0AAE59003C5216 /* SearchCell.swift */,
 			);
 			path = Airplane;
 			sourceTree = "<group>";
@@ -314,6 +320,8 @@
 				276EF2E61D0120FE007FAC13 /* FriendCell.swift in Sources */,
 				2782EF451CF6F608003B1289 /* PostCell.swift in Sources */,
 				27BE153A1D013ACF00B70D94 /* FriendListViewController.swift in Sources */,
+				276B66051D0AAE59003C5216 /* SearchCell.swift in Sources */,
+				276B66031D0AAC6B003C5216 /* SearchResultViewController.swift in Sources */,
 				27D906301CF6C55800400035 /* Post.swift in Sources */,
 				27CF0E521CED9B8300CFF5C1 /* AppDelegate.swift in Sources */,
 				2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */,

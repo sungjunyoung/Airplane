@@ -35,6 +35,7 @@ class UserManager{
         return sum
     }
     
+    
     //이름 해시 인덱스를 리턴하는 해싱 함수
     static func nameHashingFunc(name:String) -> Int{
         var sum = 0
@@ -64,6 +65,18 @@ class UserManager{
         
     }
     
+    
+    //인덱스로 유저를 리턴하는 함수
+    static func findByIndex(index:Int)->User{
+        for user in userList{
+            print("Now Searching : " + user.name + " " + String(user.index))
+            if user.index == index{
+                return user
+            }
+        }
+        return User()
+    }
+    
     //이메일 해시테이블을 검색하여 해당 유저를 리턴해주는 함수
     static func findByEmail(email:String) -> User{
         let index:Int = emailHashingFunc(email)
@@ -80,6 +93,16 @@ class UserManager{
         var index:Int = emailHashingFunc(user.email)
         let email = user.email
         let name = user.name
+        
+        var count = 0
+        for i in userList{
+            if i.email == email{
+                userList[count] = user
+                break
+            }
+            count += 1
+        }
+        
         emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)].group = user.group
         emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)].password = user.password
         emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)].friendList = user.friendList

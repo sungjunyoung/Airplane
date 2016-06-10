@@ -51,12 +51,19 @@ class SignupViewController : UIViewController{
                 passwordAlert()
                 return
             } else{
+                for i in UserManager.userList{
+                    if emailTextField.text == i.email{
+                        emailAlert()
+                        return
+                    }
+                }
                 var user = User()
-                user.index = UserManager.userList.count
+                user.index = UserManager.userList[UserManager.userList.count-1].index+1
                 user.email = emailTextField.text!
                 user.password = passwordTextField.text!
                 user.name = nameTextField.text!
                 user.group = groupTextField.text!
+                user.requestList.append(-1)
                 
                 
                 UserManager.userList.append(user)
@@ -94,6 +101,16 @@ class SignupViewController : UIViewController{
     
     func passwordAlert(){
         let alert = UIAlertController(title: "비밀번호 불일치", message: "비밀번호가 일치하는지 확인해주세요", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let cancel = UIAlertAction(title: "확인", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        alert.addAction(cancel)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func emailAlert(){
+        let alert = UIAlertController(title: "동일 이메일 존재", message: "다른 이메일을 사용해 주세요", preferredStyle: UIAlertControllerStyle.Alert)
         
         let cancel = UIAlertAction(title: "확인", style: UIAlertActionStyle.Cancel, handler: nil)
         

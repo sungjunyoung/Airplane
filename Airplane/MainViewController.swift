@@ -13,6 +13,7 @@ import UIKit
 class MainViewController : UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var PostTableView: UITableView!
     @IBOutlet weak var searchText: UITextField!
+    @IBOutlet weak var requestBtn: UIButton!
     var postList = Array<Post>()
     
     override func viewDidLoad() {
@@ -23,12 +24,31 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
         
         postList.appendContentsOf(UserManager.nowUser.postList)
         
+        for user in UserManager.userList{
+            print(user.name)
+            print(user.index)
+            print(user.friendList)
+            print(user.requestList)
+            print(user.postList)
+        }
+        
         if UserManager.nowUser.friendList.count != 0{
             for friendIndex in UserManager.nowUser.friendList{
-                postList.appendContentsOf(UserManager.userList[friendIndex].postList)
+                for user in UserManager.userList{
+                    if(user.index == friendIndex){
+                        postList.appendContentsOf(user.postList)
+                    }
+                }
             }
         }
+        for post in postList{
+            print(String(post.userIndex) + post.content)
+        }
         postList.sortInPlace{(post1:Post, post2:Post)->Bool in post1.date > post2.date}
+        if UserManager.nowUser.requestList[0] != -1{
+            requestBtn.backgroundColor = UIColor(red: 0, green: 2, blue: 4, alpha: 0)
+        }
+        
         print("mainview is loaded")
     }
     
@@ -42,13 +62,13 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
         self.view.frame.origin.y = 0
     }
     
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postList.count
-    }
     @IBAction func toMyTimeLine(sender: AnyObject) {
         SaveClickInfo.set(UserManager.nowUser.email)
         self.performSegueWithIdentifier("segToUserTimeLine", sender: nil)
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return postList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -56,7 +76,15 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
         let cell :PostCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! PostCell
         
         let post = postList[indexPath.row]
-        cell.setCell(UserManager.userList[post.userIndex].name, email: UserManager.userList[post.userIndex].email, content: post.content, date: post.date)
+        
+        
+        for user in UserManager.userList{
+            if user.index == post.userIndex{
+                
+                cell.setCell(user.name, email: user.email, content: post.content, date: post.date)
+                break
+            }
+        }
         
         return cell
     }

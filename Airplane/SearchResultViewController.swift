@@ -31,7 +31,7 @@ class SearchResultViewController : UIViewController, UITableViewDelegate, UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell :SearchCell = tableView.dequeueReusableCellWithIdentifier("SearchCell") as! SearchCell
+        let cell :SearchCell = tableView.dequeueReusableCellWithIdentifier("SearchCell", forIndexPath:indexPath) as! SearchCell
         //cell.deleteBtn.tag = indexPath.row
         //cell.deleteBtn.addTarget(self, action: #selector(FriendListViewController.deleteFriend(_:)), forControlEvents: .TouchUpInside)
         

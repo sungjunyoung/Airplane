@@ -12,10 +12,12 @@
 		274191EA1D0A6CB20026AAE0 /* UserTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191E91D0A6CB20026AAE0 /* UserTimeLineViewController.swift */; };
 		274191EC1D0A6D220026AAE0 /* FriendPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */; };
 		274191EE1D0A70AB0026AAE0 /* SaveClickInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */; };
-		274191F41D0A8C200026AAE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274191F31D0A8C200026AAE0 /* Assets.xcassets */; };
 		276B66011D0AAB3F003C5216 /* SearchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B66001D0AAB3F003C5216 /* SearchText.swift */; };
 		276B66031D0AAC6B003C5216 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B66021D0AAC6B003C5216 /* SearchResultViewController.swift */; };
 		276B66051D0AAE59003C5216 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B66041D0AAE59003C5216 /* SearchCell.swift */; };
+		276B66071D0AC7CE003C5216 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B66061D0AC7CE003C5216 /* RequestViewController.swift */; };
+		276B66091D0AC9F6003C5216 /* RequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B66081D0AC9F6003C5216 /* RequestCell.swift */; };
+		276B660B1D0ADA44003C5216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276B660A1D0ADA44003C5216 /* Assets.xcassets */; };
 		276EF2E61D0120FE007FAC13 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EF2E51D0120FE007FAC13 /* FriendCell.swift */; };
 		2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF401CF6E49F003B1289 /* FileManager.swift */; };
 		2782EF451CF6F608003B1289 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF441CF6F608003B1289 /* PostCell.swift */; };
@@ -55,10 +57,12 @@
 		274191E91D0A6CB20026AAE0 /* UserTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTimeLineViewController.swift; sourceTree = "<group>"; };
 		274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPostCell.swift; sourceTree = "<group>"; };
 		274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveClickInfo.swift; sourceTree = "<group>"; };
-		274191F31D0A8C200026AAE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276B66001D0AAB3F003C5216 /* SearchText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchText.swift; sourceTree = "<group>"; };
 		276B66021D0AAC6B003C5216 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		276B66041D0AAE59003C5216 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		276B66061D0AC7CE003C5216 /* RequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		276B66081D0AC9F6003C5216 /* RequestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestCell.swift; sourceTree = "<group>"; };
+		276B660A1D0ADA44003C5216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276EF2E51D0120FE007FAC13 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		2782EF401CF6E49F003B1289 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		2782EF441CF6F608003B1289 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -129,7 +133,7 @@
 		27CF0E501CED9B8300CFF5C1 /* Airplane */ = {
 			isa = PBXGroup;
 			children = (
-				274191F31D0A8C200026AAE0 /* Assets.xcassets */,
+				276B660A1D0ADA44003C5216 /* Assets.xcassets */,
 				27CF0E511CED9B8300CFF5C1 /* AppDelegate.swift */,
 				27CF0E531CED9B8300CFF5C1 /* ViewController.swift */,
 				27CF0E551CED9B8300CFF5C1 /* Main.storyboard */,
@@ -151,6 +155,8 @@
 				276B66001D0AAB3F003C5216 /* SearchText.swift */,
 				276B66021D0AAC6B003C5216 /* SearchResultViewController.swift */,
 				276B66041D0AAE59003C5216 /* SearchCell.swift */,
+				276B66061D0AC7CE003C5216 /* RequestViewController.swift */,
+				276B66081D0AC9F6003C5216 /* RequestCell.swift */,
 			);
 			path = Airplane;
 			sourceTree = "<group>";
@@ -281,8 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CF0E5C1CED9B8300CFF5C1 /* LaunchScreen.storyboard in Resources */,
+				276B660B1D0ADA44003C5216 /* Assets.xcassets in Resources */,
 				27CF0E571CED9B8300CFF5C1 /* Main.storyboard in Resources */,
-				274191F41D0A8C200026AAE0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +321,7 @@
 				27E0D1411CFC3AFF00F82A5E /* SettingViewController.swift in Sources */,
 				276B66011D0AAB3F003C5216 /* SearchText.swift in Sources */,
 				274191EA1D0A6CB20026AAE0 /* UserTimeLineViewController.swift in Sources */,
+				276B66071D0AC7CE003C5216 /* RequestViewController.swift in Sources */,
 				274191EE1D0A70AB0026AAE0 /* SaveClickInfo.swift in Sources */,
 				274191EC1D0A6D220026AAE0 /* FriendPostCell.swift in Sources */,
 				276EF2E61D0120FE007FAC13 /* FriendCell.swift in Sources */,
@@ -323,6 +330,7 @@
 				276B66051D0AAE59003C5216 /* SearchCell.swift in Sources */,
 				276B66031D0AAC6B003C5216 /* SearchResultViewController.swift in Sources */,
 				27D906301CF6C55800400035 /* Post.swift in Sources */,
+				276B66091D0AC9F6003C5216 /* RequestCell.swift in Sources */,
 				27CF0E521CED9B8300CFF5C1 /* AppDelegate.swift in Sources */,
 				2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */,
 			);

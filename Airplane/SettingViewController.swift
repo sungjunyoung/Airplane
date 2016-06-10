@@ -87,7 +87,32 @@ class SettingViewController : UIViewController{
                 }
                 counter += 1
             }
+            
+            var c = 0
+            for user in UserManager.userList{
+                var count = 0
+                for i in user.friendList{
+                    if UserManager.nowUser.index == i{
+                        UserManager.userList[c].friendList.removeAtIndex(count)
+                    }
+                    count += 1
+                }
+                
+                count = 0
+                for j in user.requestList{
+                    if UserManager.nowUser.index == j{
+                        UserManager.userList[c].requestList.removeAtIndex(count)
+                        if user.requestList.count == 0{
+                            UserManager.userList[c].requestList.append(-1)
+                            break
+                        }
+                    }
+                    count += 1
+                }
+                c += 1
+            }
             UserManager.deleteUserInHashTable(toDeleteUser)
+            
             self.performSegueWithIdentifier("segSignOut", sender:self)
         }
         alert.addAction(yes)

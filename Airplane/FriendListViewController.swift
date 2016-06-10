@@ -22,7 +22,11 @@ class FriendListViewController : UIViewController, UITableViewDelegate, UITableV
         userName.text = UserManager.nowUser.name
         if UserManager.nowUser.friendList.count != 0{
             for friendIndex in UserManager.nowUser.friendList{
-                friendList.append(UserManager.userList[friendIndex])
+                for user in UserManager.userList{
+                    if user.index == friendIndex {
+                        friendList.append(user)
+                    }
+                }
             }
         }
         
@@ -43,6 +47,18 @@ class FriendListViewController : UIViewController, UITableViewDelegate, UITableV
         cell.setCell(friend.name, email: friend.email, group:friend.group)
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as! FriendCell
+        
+        
+        SaveClickInfo.set(currentCell.emailLabel.text!)
+        print(currentCell.emailLabel.text!)
+        self.performSegueWithIdentifier("segLookInfo", sender: nil)
+        //CODE TO BE RUN ON CELL TOUCH
     }
     
     func deleteFriend(sender: AnyObject){

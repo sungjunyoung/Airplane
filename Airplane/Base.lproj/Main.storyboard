@@ -88,7 +88,6 @@
         <!--Main View Controller-->
         <scene sceneID="MQY-aW-EjI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3uQ-ab-YXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="shS-cU-rRA" customClass="MainViewController" customModule="Airplane" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ypW-28-ItW"/>
@@ -223,6 +222,13 @@
                                     <action selector="toMyTimeLine:" destination="shS-cU-rRA" eventType="touchUpInside" id="u8x-i6-LMI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9X-bR-tfL">
+                                <rect key="frame" x="316" y="510" width="50" height="50"/>
+                                <state key="normal" image="plus"/>
+                                <connections>
+                                    <action selector="writePost:" destination="shS-cU-rRA" eventType="touchUpInside" id="1Yj-dI-x7T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -232,6 +238,7 @@
                         <segue destination="EHw-qp-B3Y" kind="presentation" identifier="segToUserTimeLine" modalTransitionStyle="crossDissolve" id="EuW-50-gTt"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3uQ-ab-YXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1235.5" y="19.5"/>
         </scene>
@@ -420,9 +427,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhJ-3y-hr4">
-                                                    <rect key="frame" x="221" y="39" width="146" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhJ-3y-hr4">
+                                                    <rect key="frame" x="8" y="36" width="146" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -432,11 +439,16 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bm6-No-Jyo">
+                                                    <rect key="frame" x="342" y="32" width="25" height="25"/>
+                                                    <state key="normal" image="cancel"/>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentLabel" destination="aqn-bV-GtP" id="bqL-im-e8R"/>
                                             <outlet property="dateLabel" destination="OhJ-3y-hr4" id="4xO-gd-IL6"/>
+                                            <outlet property="postDelBtn" destination="bm6-No-Jyo" id="iNr-kC-LLL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -769,12 +781,13 @@
     <resources>
         <image name="backbtn" width="1030" height="632"/>
         <image name="bg" width="2480" height="3507"/>
-        <image name="cancel" width="753" height="767"/>
+        <image name="cancel" width="274" height="277"/>
         <image name="logo" width="1024" height="504"/>
+        <image name="plus" width="525" height="525"/>
         <image name="upperbg" width="2480" height="3507"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0YW-4A-aS9"/>
+        <segue reference="H05-dh-eIh"/>
         <segue reference="8gy-uH-Rcs"/>
     </inferredMetricsTieBreakers>
 </document>

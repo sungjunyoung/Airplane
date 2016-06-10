@@ -12,8 +12,8 @@
 		274191EA1D0A6CB20026AAE0 /* UserTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191E91D0A6CB20026AAE0 /* UserTimeLineViewController.swift */; };
 		274191EC1D0A6D220026AAE0 /* FriendPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */; };
 		274191EE1D0A70AB0026AAE0 /* SaveClickInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */; };
+		274191F41D0A8C200026AAE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274191F31D0A8C200026AAE0 /* Assets.xcassets */; };
 		276EF2E61D0120FE007FAC13 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EF2E51D0120FE007FAC13 /* FriendCell.swift */; };
-		277619521CEDC3B90048D46C /* userdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 277619511CEDC3B90048D46C /* userdata.txt */; };
 		2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF401CF6E49F003B1289 /* FileManager.swift */; };
 		2782EF451CF6F608003B1289 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF441CF6F608003B1289 /* PostCell.swift */; };
 		27BE153A1D013ACF00B70D94 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BE15391D013ACF00B70D94 /* FriendListViewController.swift */; };
@@ -25,7 +25,6 @@
 		27CF0E721CED9B8400CFF5C1 /* AirplaneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF0E711CED9B8400CFF5C1 /* AirplaneUITests.swift */; };
 		27D9062A1CF6751800400035 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D906291CF6751800400035 /* User.swift */; };
 		27D9062C1CF6B98E00400035 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9062B1CF6B98E00400035 /* UserManager.swift */; };
-		27D9062E1CF6C53400400035 /* postdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 27D9062D1CF6C53400400035 /* postdata.txt */; };
 		27D906301CF6C55800400035 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D9062F1CF6C55800400035 /* Post.swift */; };
 		27E0D1411CFC3AFF00F82A5E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E0D1401CFC3AFF00F82A5E /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -53,8 +52,8 @@
 		274191E91D0A6CB20026AAE0 /* UserTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTimeLineViewController.swift; sourceTree = "<group>"; };
 		274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPostCell.swift; sourceTree = "<group>"; };
 		274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveClickInfo.swift; sourceTree = "<group>"; };
+		274191F31D0A8C200026AAE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276EF2E51D0120FE007FAC13 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
-		277619511CEDC3B90048D46C /* userdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userdata.txt; sourceTree = "<group>"; };
 		2782EF401CF6E49F003B1289 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		2782EF441CF6F608003B1289 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		27BE15391D013ACF00B70D94 /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +71,6 @@
 		27CF0E731CED9B8400CFF5C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27D906291CF6751800400035 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27D9062B1CF6B98E00400035 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		27D9062D1CF6C53400400035 /* postdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = postdata.txt; sourceTree = "<group>"; };
 		27D9062F1CF6C55800400035 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		27E0D1401CFC3AFF00F82A5E /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,17 +123,16 @@
 		27CF0E501CED9B8300CFF5C1 /* Airplane */ = {
 			isa = PBXGroup;
 			children = (
+				274191F31D0A8C200026AAE0 /* Assets.xcassets */,
 				27CF0E511CED9B8300CFF5C1 /* AppDelegate.swift */,
 				27CF0E531CED9B8300CFF5C1 /* ViewController.swift */,
 				27CF0E551CED9B8300CFF5C1 /* Main.storyboard */,
 				27CF0E5A1CED9B8300CFF5C1 /* LaunchScreen.storyboard */,
 				27CF0E5D1CED9B8300CFF5C1 /* Info.plist */,
-				277619511CEDC3B90048D46C /* userdata.txt */,
 				271525681CEEC6FD00895A5C /* MainViewController.swift */,
 				2715256A1CEECEDA00895A5C /* SignupViewController.swift */,
 				27D906291CF6751800400035 /* User.swift */,
 				27D9062B1CF6B98E00400035 /* UserManager.swift */,
-				27D9062D1CF6C53400400035 /* postdata.txt */,
 				27D9062F1CF6C55800400035 /* Post.swift */,
 				2782EF401CF6E49F003B1289 /* FileManager.swift */,
 				2782EF441CF6F608003B1289 /* PostCell.swift */,
@@ -276,8 +273,7 @@
 			files = (
 				27CF0E5C1CED9B8300CFF5C1 /* LaunchScreen.storyboard in Resources */,
 				27CF0E571CED9B8300CFF5C1 /* Main.storyboard in Resources */,
-				27D9062E1CF6C53400400035 /* postdata.txt in Resources */,
-				277619521CEDC3B90048D46C /* userdata.txt in Resources */,
+				274191F41D0A8C200026AAE0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ class FriendPostCell: UITableViewCell {
     
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var postDelBtn: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,6 +29,9 @@ class FriendPostCell: UITableViewCell {
 
         self.contentLabel.text = content
         self.dateLabel.text = date
+        if SaveClickInfo.user.name != UserManager.nowUser.name{
+            postDelBtn.hidden = true
+        }
     }
     
 }

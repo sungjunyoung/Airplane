@@ -22,6 +22,7 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
         self.hideKeyboardWhenTappedAround()
         
         if UserManager.nowUser.friendList.count != 0{
+            postList.appendContentsOf(UserManager.nowUser.postList)
             for friendIndex in UserManager.nowUser.friendList{
                 postList.appendContentsOf(UserManager.userList[friendIndex].postList)
             }
@@ -69,6 +70,41 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
         print(currentCell.emailLabel.text!)
         self.performSegueWithIdentifier("segToUserTimeLine", sender: nil)
         //CODE TO BE RUN ON CELL TOUCH
+    }
+    
+    
+    @IBAction func writePost(sender: AnyObject) {
+        let alert = UIAlertController(title: "포스트 쓰기", message: "게시할 포스트를 입력하세요", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        //add text field
+        alert.addTextFieldWithConfigurationHandler{(textField:UITextField)->Void in textField.placeholder = "포스트 내용을 입력하세요"}
+        
+        let cancel = UIAlertAction(title: "취소", style: UIAlertActionStyle.Cancel, handler: nil)
+        let ok = UIAlertAction(title: "확인", style: UIAlertActionStyle.Default){
+            (action:UIAlertAction)->Void in print("ok")
+            let textField = alert.textFields?[0]
+            let postContent = textField!.text
+            let rawDate = NSDate()
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy.MM.dd.hh.mm"
+            let date = dateFormatter.stringFromDate(rawDate)
+            
+            let post = Post(index: UserManager.nowUser.postList[UserManager.nowUser.postList.count-1].index+1, userIndex: UserManager.nowUser.index, date: date, content: postContent!)
+            
+            UserManager.nowUser.postList.append(post)
+            UserManager.updateUserInfo(UserManager.nowUser)
+            
+            self.postList.append(post)
+            self.postList.sortInPlace{(post1:Post, post2:Post)->Bool in post1.date > post2.date}
+            self.PostTableView.reloadData()
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(ok)
+        
+       
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
 

@@ -13,6 +13,7 @@
 		274191EC1D0A6D220026AAE0 /* FriendPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */; };
 		274191EE1D0A70AB0026AAE0 /* SaveClickInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */; };
 		274191F41D0A8C200026AAE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274191F31D0A8C200026AAE0 /* Assets.xcassets */; };
+		276B66011D0AAB3F003C5216 /* SearchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B66001D0AAB3F003C5216 /* SearchText.swift */; };
 		276EF2E61D0120FE007FAC13 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EF2E51D0120FE007FAC13 /* FriendCell.swift */; };
 		2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF401CF6E49F003B1289 /* FileManager.swift */; };
 		2782EF451CF6F608003B1289 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF441CF6F608003B1289 /* PostCell.swift */; };
@@ -53,6 +54,7 @@
 		274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPostCell.swift; sourceTree = "<group>"; };
 		274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveClickInfo.swift; sourceTree = "<group>"; };
 		274191F31D0A8C200026AAE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		276B66001D0AAB3F003C5216 /* SearchText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchText.swift; sourceTree = "<group>"; };
 		276EF2E51D0120FE007FAC13 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		2782EF401CF6E49F003B1289 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		2782EF441CF6F608003B1289 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				274191E91D0A6CB20026AAE0 /* UserTimeLineViewController.swift */,
 				274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */,
 				274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */,
+				276B66001D0AAB3F003C5216 /* SearchText.swift */,
 			);
 			path = Airplane;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */,
 				27D9062A1CF6751800400035 /* User.swift in Sources */,
 				27E0D1411CFC3AFF00F82A5E /* SettingViewController.swift in Sources */,
+				276B66011D0AAB3F003C5216 /* SearchText.swift in Sources */,
 				274191EA1D0A6CB20026AAE0 /* UserTimeLineViewController.swift in Sources */,
 				274191EE1D0A70AB0026AAE0 /* SaveClickInfo.swift in Sources */,
 				274191EC1D0A6D220026AAE0 /* FriendPostCell.swift in Sources */,

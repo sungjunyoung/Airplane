@@ -42,6 +42,8 @@ class UserTimeLineViewController : UIViewController, UITableViewDelegate, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell :FriendPostCell = tableView.dequeueReusableCellWithIdentifier("friendPostCell") as! FriendPostCell
+        cell.postDelBtn.tag = indexPath.row
+        cell.postDelBtn.addTarget(self, action: #selector(UserTimeLineViewController.deletePost(_:)),forControlEvents: .TouchUpInside)
         
         let post = postList[indexPath.row]
         
@@ -49,5 +51,9 @@ class UserTimeLineViewController : UIViewController, UITableViewDelegate, UITabl
         
         return cell
         
+    }
+    
+    func deletePost(sender: AnyObject){
+        self.performSegueWithIdentifier("segBackToTimeLine", sender:self)
     }
 }

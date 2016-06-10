@@ -34,4 +34,21 @@ class FriendPostCell: UITableViewCell {
         }
     }
     
+    @IBAction func deletePost(sender: AnyObject) {
+        var count = 0
+        for post in UserManager.nowUser.postList{
+            if post.content == self.contentLabel.text && post.date == self.dateLabel.text{
+                UserManager.nowUser.postList.removeAtIndex(count)
+                break
+            }
+            count += 1
+        }
+        
+        UserManager.updateUserInfo(UserManager.nowUser)
+        
+        let alert = UIAlertView(title: "포스트 삭제", message: "삭제가 완료되었습니다.", delegate: nil, cancelButtonTitle: "확인")
+        alert.show()
+        
+    }
+    
 }

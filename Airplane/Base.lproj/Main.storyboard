@@ -123,7 +123,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aIb-NY-zBf" kind="presentation" id="Gvz-Xj-GEB"/>
+                                    <action selector="search:" destination="shS-cU-rRA" eventType="touchUpInside" id="cdL-bP-yED"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4L-az-fTg">
@@ -235,7 +235,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="PostTableView" destination="aAu-Ne-Ecg" id="Y9h-7R-y21"/>
+                        <outlet property="searchText" destination="pOW-qx-1Dg" id="FAV-ik-L9F"/>
                         <segue destination="EHw-qp-B3Y" kind="presentation" identifier="segToUserTimeLine" modalTransitionStyle="crossDissolve" id="EuW-50-gTt"/>
+                        <segue destination="aIb-NY-zBf" kind="presentation" identifier="segSearch" id="Jzs-Rd-sTe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uQ-ab-YXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -442,6 +444,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bm6-No-Jyo">
                                                     <rect key="frame" x="342" y="32" width="25" height="25"/>
                                                     <state key="normal" image="cancel"/>
+                                                    <connections>
+                                                        <action selector="deletePost:" destination="LHM-Cy-kCu" eventType="touchUpInside" id="Of1-ay-vId"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -475,6 +480,7 @@
                         <outlet property="nameLabel" destination="VTG-Oy-vVR" id="1ZC-jm-5RO"/>
                         <outlet property="ownerName" destination="VTG-Oy-vVR" id="drC-Wx-POF"/>
                         <outlet property="postTableView" destination="fb7-Iw-EJX" id="e8M-2m-f2e"/>
+                        <segue destination="shS-cU-rRA" kind="presentation" identifier="segBackToTimeLine" modalTransitionStyle="crossDissolve" id="Wt7-pW-vyW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DaK-Or-uRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -655,7 +661,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEy-vN-a7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2191.5" y="628.5"/>
+            <point key="canvasLocation" x="1235.5" y="-735.5"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="hor-PS-cGX">
@@ -787,7 +793,7 @@
         <image name="upperbg" width="2480" height="3507"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H05-dh-eIh"/>
+        <segue reference="Wt7-pW-vyW"/>
         <segue reference="8gy-uH-Rcs"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -55,7 +55,13 @@ class UserManager{
         
         let nameIndex:Int = nameHashingFunc(user.name)
         let name = user.name
-        nameHashTable[nameIndex].removeAtIndex(nameBinarySearch(nameHashTable[nameIndex], key:name))
+        for i in nameBinarySearch(nameHashTable[nameIndex], key:name){
+            if nameHashTable[nameIndex][i].email == email{
+                nameHashTable[nameIndex].removeAtIndex(i)
+                break
+            }
+        }
+        
     }
     
     //이메일 해시테이블을 검색하여 해당 유저를 리턴해주는 함수
@@ -81,24 +87,30 @@ class UserManager{
         
         
         index = nameHashingFunc(user.name)
-        nameHashTable[index][nameBinarySearch(nameHashTable[index], key: name)].group = user.group
-        nameHashTable[index][nameBinarySearch(nameHashTable[index], key: name)].password = user.password
-        nameHashTable[index][nameBinarySearch(nameHashTable[index], key: name)].friendList = user.friendList
-        nameHashTable[index][nameBinarySearch(nameHashTable[index], key: name)].requestList = user.requestList
-
+        for i in nameBinarySearch(nameHashTable[index], key:name){
+            if nameHashTable[index][i].email == email{
+                nameHashTable[index][i].group = user.group
+                nameHashTable[index][i].password = user.password
+                nameHashTable[index][i].friendList = user.friendList
+                nameHashTable[index][i].requestList = user.requestList
+                break;
+            }
+        }
         
         FileManager.updateUserFile(userList, postList: postList)
     }
     
-    //해시테이블에서 이름으로 검색하여 유저를 리턴해주는 ㅎ마수
-    static func findByName(name:String) -> User{
-        let index:Int = emailHashingFunc(name)
-        let noUser = User()
-        if( emailBinarySearch(nameHashTable[index], key: name) == -1 ){
-            return noUser
-        } else{
-            return nameHashTable[index][nameBinarySearch(emailHashTable[index], key: name)]
+    //해시테이블에서 이름으로 검색하여 유저를 리턴해주는 함수
+    static func findByName(name:String) -> Array<User>{
+        let index:Int = nameHashingFunc(name)
+        var resultArray = Array<User>()
+        
+        for i in nameBinarySearch(nameHashTable[index], key:name){
+            resultArray.append(nameHashTable[index][i])
         }
+
+        return resultArray
+        
     }
     
     //해시테이블 내에서 바이너리 서치 (이메일)
@@ -120,9 +132,10 @@ class UserManager{
     }
     
     //해시테이블 내에서 바이너리 서치 (이름)
-    static func nameBinarySearch(list:Array<User>, key:String)->Int{
+    static func nameBinarySearch(list:Array<User>, key:String)->Array<Int>{
         var first = 0
         var last = list.count
+        var resultArr = Array<Int>()
         
         while(first < last){
             var mid = Int((first+last)/2)
@@ -131,10 +144,19 @@ class UserManager{
             } else if (key > list[mid].name){
                 first = mid + 1
             } else{
-                return mid
+                while (first > 0 && list[first-1].email == key){
+                    first-=1;
+                }
+                while (last < list.count - 1 && list[last+1].email == key){
+                    last+=1;
+                }
+                for(var i = first ; i<=last ; i+=1){
+                    resultArr.append(i)
+                }
+                return resultArr
             }
         }
-        return -(first+1)
+        return resultArr
     }
     
     

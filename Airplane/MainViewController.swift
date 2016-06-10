@@ -12,7 +12,7 @@ import UIKit
 
 class MainViewController : UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var PostTableView: UITableView!
-    
+    @IBOutlet weak var searchText: UITextField!
     var postList = Array<Post>()
     
     override func viewDidLoad() {
@@ -105,6 +105,10 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
        
         
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    @IBAction func search(sender: AnyObject) {
+        SearchText.set(searchText.text!)
+         self.performSegueWithIdentifier("segSearch", sender: self)
     }
 }
 

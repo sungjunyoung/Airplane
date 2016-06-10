@@ -36,11 +36,17 @@ class FriendListViewController : UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell :FriendCell = tableView.dequeueReusableCellWithIdentifier("FriendCell") as! FriendCell
-        
+        cell.deleteBtn.tag = indexPath.row
+        cell.deleteBtn.addTarget(self, action: #selector(FriendListViewController.deleteFriend(_:)), forControlEvents: .TouchUpInside)
         
         let friend = friendList[indexPath.row]
         cell.setCell(friend.name, email: friend.email, group:friend.group)
         
         return cell
     }
+    
+    func deleteFriend(sender: AnyObject){
+        self.performSegueWithIdentifier("segBack", sender:self)        
+    }
+    
 }

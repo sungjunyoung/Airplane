@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2703EFBA1CEDB91100F52C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2703EFB91CEDB91100F52C31 /* Assets.xcassets */; };
 		271525691CEEC6FD00895A5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271525681CEEC6FD00895A5C /* MainViewController.swift */; };
 		2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2715256A1CEECEDA00895A5C /* SignupViewController.swift */; };
+		274191EA1D0A6CB20026AAE0 /* UserTimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191E91D0A6CB20026AAE0 /* UserTimeLineViewController.swift */; };
+		274191EC1D0A6D220026AAE0 /* FriendPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */; };
+		274191EE1D0A70AB0026AAE0 /* SaveClickInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */; };
 		276EF2E61D0120FE007FAC13 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276EF2E51D0120FE007FAC13 /* FriendCell.swift */; };
 		277619521CEDC3B90048D46C /* userdata.txt in Resources */ = {isa = PBXBuildFile; fileRef = 277619511CEDC3B90048D46C /* userdata.txt */; };
 		2782EF411CF6E49F003B1289 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782EF401CF6E49F003B1289 /* FileManager.swift */; };
@@ -46,9 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2703EFB91CEDB91100F52C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Drawing/Drawing/Assets.xcassets; sourceTree = "<group>"; };
 		271525681CEEC6FD00895A5C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2715256A1CEECEDA00895A5C /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		274191E91D0A6CB20026AAE0 /* UserTimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTimeLineViewController.swift; sourceTree = "<group>"; };
+		274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendPostCell.swift; sourceTree = "<group>"; };
+		274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveClickInfo.swift; sourceTree = "<group>"; };
 		276EF2E51D0120FE007FAC13 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		277619511CEDC3B90048D46C /* userdata.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userdata.txt; sourceTree = "<group>"; };
 		2782EF401CF6E49F003B1289 /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
@@ -121,7 +125,6 @@
 		27CF0E501CED9B8300CFF5C1 /* Airplane */ = {
 			isa = PBXGroup;
 			children = (
-				2703EFB91CEDB91100F52C31 /* Assets.xcassets */,
 				27CF0E511CED9B8300CFF5C1 /* AppDelegate.swift */,
 				27CF0E531CED9B8300CFF5C1 /* ViewController.swift */,
 				27CF0E551CED9B8300CFF5C1 /* Main.storyboard */,
@@ -139,6 +142,9 @@
 				27E0D1401CFC3AFF00F82A5E /* SettingViewController.swift */,
 				276EF2E51D0120FE007FAC13 /* FriendCell.swift */,
 				27BE15391D013ACF00B70D94 /* FriendListViewController.swift */,
+				274191E91D0A6CB20026AAE0 /* UserTimeLineViewController.swift */,
+				274191EB1D0A6D220026AAE0 /* FriendPostCell.swift */,
+				274191ED1D0A70AB0026AAE0 /* SaveClickInfo.swift */,
 			);
 			path = Airplane;
 			sourceTree = "<group>";
@@ -269,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CF0E5C1CED9B8300CFF5C1 /* LaunchScreen.storyboard in Resources */,
-				2703EFBA1CEDB91100F52C31 /* Assets.xcassets in Resources */,
 				27CF0E571CED9B8300CFF5C1 /* Main.storyboard in Resources */,
 				27D9062E1CF6C53400400035 /* postdata.txt in Resources */,
 				277619521CEDC3B90048D46C /* userdata.txt in Resources */,
@@ -303,6 +308,9 @@
 				2715256B1CEECEDA00895A5C /* SignupViewController.swift in Sources */,
 				27D9062A1CF6751800400035 /* User.swift in Sources */,
 				27E0D1411CFC3AFF00F82A5E /* SettingViewController.swift in Sources */,
+				274191EA1D0A6CB20026AAE0 /* UserTimeLineViewController.swift in Sources */,
+				274191EE1D0A70AB0026AAE0 /* SaveClickInfo.swift in Sources */,
+				274191EC1D0A6D220026AAE0 /* FriendPostCell.swift in Sources */,
 				276EF2E61D0120FE007FAC13 /* FriendCell.swift in Sources */,
 				2782EF451CF6F608003B1289 /* PostCell.swift in Sources */,
 				27BE153A1D013ACF00B70D94 /* FriendListViewController.swift in Sources */,

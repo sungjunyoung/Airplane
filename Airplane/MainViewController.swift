@@ -40,8 +40,13 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
         self.view.frame.origin.y = 0
     }
     
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postList.count
+    }
+    @IBAction func toMyTimeLine(sender: AnyObject) {
+        SaveClickInfo.set(UserManager.nowUser.email)
+        self.performSegueWithIdentifier("segToUserTimeLine", sender: nil)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -52,6 +57,18 @@ class MainViewController : UIViewController, UITableViewDelegate, UITableViewDat
         cell.setCell(UserManager.userList[post.userIndex].name, email: UserManager.userList[post.userIndex].email, content: post.content, date: post.date)
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRowAtIndexPath(indexPath)! as! PostCell
+
+        
+        SaveClickInfo.set(currentCell.emailLabel.text!)
+        print(currentCell.emailLabel.text!)
+        self.performSegueWithIdentifier("segToUserTimeLine", sender: nil)
+        //CODE TO BE RUN ON CELL TOUCH
     }
 }
 

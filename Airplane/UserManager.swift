@@ -47,7 +47,7 @@ class UserManager{
         return sum
     }
     
-    
+    //이메일과 이름 해시테이블에서 유저를 삭제합니다.
     static func deleteUserInHashTable(user:User){
         let emailindex:Int = emailHashingFunc(user.email)
         let email = user.email
@@ -71,10 +71,22 @@ class UserManager{
     
     //유저의 정보를 해시테이블에 업데이트 해주는 함수
     static func updateUserInfo(user:User){
-        let index:Int = emailHashingFunc(user.email)
+        var index:Int = emailHashingFunc(user.email)
         let email = user.email
+        let name = user.name
         emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)].group = user.group
         emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)].password = user.password
+        emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)].friendList = user.friendList
+        emailHashTable[index][emailBinarySearch(emailHashTable[index], key: email)].requestList = user.requestList
+        
+        
+        index = nameHashingFunc(user.name)
+        nameHashTable[index][nameBinarySearch(nameHashTable[index], key: name)].group = user.group
+        nameHashTable[index][nameBinarySearch(nameHashTable[index], key: name)].password = user.password
+        nameHashTable[index][nameBinarySearch(nameHashTable[index], key: name)].friendList = user.friendList
+        nameHashTable[index][nameBinarySearch(nameHashTable[index], key: name)].requestList = user.requestList
+
+        
         FileManager.updateUserFile(userList, postList: postList)
     }
     
@@ -107,7 +119,7 @@ class UserManager{
         return -(first+1)
     }
     
-    
+    //해시테이블 내에서 바이너리 서치 (이름)
     static func nameBinarySearch(list:Array<User>, key:String)->Int{
         var first = 0
         var last = list.count
@@ -124,7 +136,6 @@ class UserManager{
         }
         return -(first+1)
     }
-    
     
     
 
